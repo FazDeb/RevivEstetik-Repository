@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revivestetik</title>
+    <link rel="stylesheet" href="CSS/Stylesheet.css">
+    <script src="Scripts/Js-Script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="Assets/Logo.jpg" alt="Revivestetik Logo">
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact">
+
+        <div class="contactform-container">
+            <h2>Send us an email</h2>
+            <form id="contactForm">
+                <div class="contactform-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="contactform-input" required placeholder="Enter your name">
+                </div>
+                <div class="contactform-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="contactform-input" required placeholder="Enter your email address">
+                </div>
+                <div class="contactform-group">
+                    <label for="number">Contact Number:</label>
+                    <input type="text" id="number" name="number" class="contactform-input" required placeholder="Enter your contact number">
+                </div>
+                <div class="contactform-group">
+                    <label for="message">Message:</label>
+                    <textarea style="resize: none;" id="message" name="message" class="contactform-input" rows="5" required placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="contactform-button">Send</button>
+            </form>
+            <p id="feedback"></p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Phone: 2164 2351</p>
+                <p>Address: <br>RevivEstetik 12, <br>Carmelo Caruana Str., <br>Iz-Zurrieq, Malta</p>
+                <p>Email:<br><a href="mailto:revivestetik@gmail.com">Revivestetik@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com/RevivEstetik" target="_blank">Facebook</a><br>
+                <a href="https://www.instagram.com/revivestetik" target="_blank">Instagram</a>
+            </div>
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <p>Weekdays: 09:00-19:00</p> <br>
+                <p>Saturday: 09:00-14:00</p> <br>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RevivEstetik. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
