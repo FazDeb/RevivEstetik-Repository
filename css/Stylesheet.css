@@ -13,6 +13,7 @@
 
 }
 
+
 h1 {
     font-family: Cambria, 'Lora', serif;
     font-size: 500%;
@@ -34,8 +35,12 @@ body {
     width: 100%;
     min-height: 100vh; /* Ensures the body takes the full height of the viewport */
     position: relative;
-    
 }
+
+#homepageimg {
+    width: 40%;
+}
+
 
 header {
     background-color: rgb(255, 255, 255);
