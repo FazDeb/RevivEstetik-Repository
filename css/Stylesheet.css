@@ -468,19 +468,15 @@ b {
     font-size: 18px;
 }
 
-
-
 .TextImageService:nth-of-type(odd) {
         background-color: darkgray;
         color: black;
 }
 
-
 .TextImageService:nth-of-type(even) {
     background-color: lightgray;
     color: black;
 }
-
 
 /* Media Queries for Responsiveness */
 
