@@ -37,7 +37,7 @@ body {
 }
 
 #homepageimg {
-    width: 15%;
+    width: 40%;
 }
 
 
@@ -221,7 +221,6 @@ footer {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -502,12 +501,12 @@ b {
     }
 
     nav ul li {
-        margin-left: 2px;
+        margin-left: 1.5px;
         
     }
 
     nav ul li a {
-        font-size: 22px;
+        font-size: 20px;
         
     }
 
