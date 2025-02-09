@@ -38,6 +38,7 @@ body {
 
 #homepageimg {
     width: 40%;
+    height: auto;
 }
 
 
@@ -371,7 +372,7 @@ b {
     flex-wrap: wrap;
     gap: 5%;
     justify-content: space-around;
-    width: 75%;
+    width: 90%;
 }
 
 .TextImagecontainer p {
@@ -430,7 +431,7 @@ b {
 
 .TextImageService img {
     width: 450px;
-    height: 450px;
+    height: auto;
     object-fit: cover;
     padding: 10px;
 }
@@ -595,6 +596,19 @@ b {
         font-size: 12px;
     }
 
+    .TextImageService {
+        flex:auto;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+        font-size: 15px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        gap: 10px;
+        border-radius: 25px;
+    }
+
     .TextImageService .content {
         display: flex;
         align-items: center; 
@@ -606,8 +620,7 @@ b {
     }
 
     .TextImageService img {
-        width: 75%;
-        height: 75%;
+        width: 90%;
         object-fit: cover;
         padding: 10px;
     }
