@@ -12,6 +12,9 @@
     margin-right: 0;
 }
 
+html {
+    margin: 0;
+}
 
 h1 {
     font-family: Cambria, 'Lora', serif;
@@ -36,7 +39,7 @@ body {
     position: relative;
 }
 
-#homepageimg {
+#homepage img {
     width: 40%;
     height: auto;
 }
@@ -50,6 +53,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+    margin: 0;
 }
 
 
@@ -67,7 +71,7 @@ nav {
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,19 +215,19 @@ main.contact {
 footer {
     width: 100%;
     background: linear-gradient(to bottom,lightgray, gray);
-    padding: 10px 0;
+    padding: -5px 0;
     border-top: 1px solid #e7e7e7;
     position: relative;
-    margin-bottom: 0;
+    margin: 0 auto;
     font-size: 12px;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0;
+    padding: 10px;
 }
 
 .footer-section {
@@ -263,7 +267,7 @@ footer {
     width: 80%;
     padding: 1%;
     align-content: center;
-    text-align: center;
+    text-align: left;
     font-size: 19px;
 }
 
@@ -519,6 +523,12 @@ b {
     nav ul li a {
         font-size: 20px;
         
+    }
+
+
+    #homepage img {
+        width: 90%;
+        height: auto;
     }
 
     .TextImage {
