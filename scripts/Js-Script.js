@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return; // Prevent the form from being submitted
             }
 
-            var mailtoLink = `mailto:alexanderdebono13@gmail.com?subject=New Contact Form Submission&body=Name: ${name}%0AEmail: ${email}%0APhone: ${number}%0A%0AMessage:%0A${message}`;
+            var mailtoLink = `mailto:revivestetik@gmail.com?subject=New Contact Form Submission&body=Name: ${name}%0AEmail: ${email}%0APhone: ${number}%0A%0AMessage:%0A${message}`;
 
             // Open the user's email client with the pre-filled message
             window.location.href = mailtoLink;
