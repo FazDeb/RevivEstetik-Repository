@@ -288,8 +288,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
+    gap: 2%;
+    width: 200%;
+    max-width: 100%;
 }
 
 .card {
