@@ -25,5 +25,5 @@
   CMS.registerPreviewTemplate('about', createClass({
     render(){const p=this.props;return h('article',{className:'about-page'},h('h1',{},'About RevivEstetik'),h('div',{className:'about-copy'},p.widgetsFor('aboutSections').map((section,i)=>{const paths=section.getIn(['data','images']);const paragraphs=section.getIn(['data','paragraphs']);return h('section',{key:i},h('h2',{},section.getIn(['data','heading'])),paths&&h('div',{className:'section-images'},paths.map(path=>image(p,path,'')).toArray()),paragraphs&&paragraphs.map((text,j)=>h('p',{key:j},text)).toArray());})));}
   }));
-  CMS.init();
+  CMS.init({config: window.REVIVESTETIK_CMS_CONFIG});
 })();

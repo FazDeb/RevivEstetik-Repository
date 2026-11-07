@@ -6,3 +6,6 @@ dist/
 !.env.example
 
 studio-dist/
+.dev.vars
+.dev.vars.*
+.wrangler/
