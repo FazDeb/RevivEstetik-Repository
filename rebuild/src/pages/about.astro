@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {getContent} from '../lib/content';
+const {settings:s}=await getContent();
+---
+<Layout title="About"><article class="wrap section about-page"><h1>{s.tagline}</h1><div class="about-copy">{(s.aboutSections || [{heading:'Welcome to RevivEstetik',paragraphs:[s.about]}]).map(section=><section><h2>{section.heading}</h2>{section.images?.length > 0 && <div class="section-images">{section.images.map(src=><img src={src} alt={section.heading} loading="lazy"/>)}</div>}{section.paragraphs.map(p=><p>{p}</p>)}</section>)}</div><section class="location-section"><h2>Where to find us</h2><p>{s.address}</p><div class="location-maps">{(s.locationMaps||[]).filter(url=>url.startsWith('https://www.google.com/maps/embed?')).map((url,i)=><iframe title={i===0?'RevivEstetik clinic location':'Street view of RevivEstetik'} src={url} width="100%" height="350" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"/>)}</div></section></article></Layout>

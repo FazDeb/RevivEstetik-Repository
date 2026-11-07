@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {getContent} from '../../lib/content';
+const {treatments}=await getContent();
+const categories=[...new Set(treatments.map(t=>t.category))];
+---
+<Layout title="Treatments"><section class="wrap section"><p class="eyebrow"></p><h1>Our services</h1><div class="filters"><label>Find a treatment<input type="search" id="search" placeholder="Search treatments…"/></label><label>Category<select id="category"><option value="">All treatments</option>{categories.map(c=><option>{c}</option>)}</select></label></div><p id="count" role="status">{treatments.length} treatments</p><div class="cards" id="results">{treatments.map(t=><a class="card" href={`/treatments/${t.slug}/`} data-search={`${t.title} ${t.summary}`.toLowerCase()} data-category={t.category}><div class="image"><img src={t.image} alt={t.title} loading="lazy"/></div><div class="card-meta">{t.category}<span>↗</span></div><h2>{t.title}</h2><p>{t.summary}</p></a>)}</div><p id="empty" hidden>No matching treatments. Try another search or category.</p></section></Layout>
+<script>
+const search=document.querySelector<HTMLInputElement>('#search')!;
+const category=document.querySelector<HTMLSelectElement>('#category')!;
+function filter(){let count=0;document.querySelectorAll<HTMLElement>('[data-search]').forEach(card=>{const show=card.dataset.search!.includes(search.value.trim().toLowerCase())&&(!category.value||card.dataset.category===category.value);card.hidden=!show;if(show)count++;});document.querySelector('#count')!.textContent=`${count} treatment${count===1?'':'s'}`;document.querySelector<HTMLElement>('#empty')!.hidden=count>0;}
+search.addEventListener('input',filter);category.addEventListener('change',filter);
+</script>
+

@@ -1,0 +1,11 @@
+import {spawn} from 'node:child_process';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import {dirname,resolve} from 'node:path';
+const require=createRequire(import.meta.url);
+const pkg=require.resolve('decap-server/package.json');
+const {bin}=require(pkg);
+const entry=typeof bin==='string'?bin:Object.values(bin)[0];
+const repo=resolve(dirname(fileURLToPath(import.meta.url)),'../..');
+const child=spawn(process.execPath,[resolve(dirname(pkg),entry)],{cwd:repo,stdio:'inherit',env:{...process.env,MODE:'fs',BIND_HOST:'127.0.0.1',PORT:'8081',GIT_REPO_DIRECTORY:repo}});
+child.on('exit',code=>process.exit(code??1));

@@ -1,0 +1,41 @@
+{
+  "about": "At RevivEstetik, we believe that beauty is more than just skin deep. It is about confidence, self-care, and feeling your best. Our clinic in Żurrieq offers aesthetic treatments tailored to your individual needs.",
+  "aboutSections": [
+    {
+      "_key": "about0",
+      "heading": "Welcome to RevivEstetik",
+      "paragraphs": [
+        "At RevivEstetik, we believe that beauty is more than just skin deep, it's about confidence, self-care, and feeling your best. Located in the heart of Żurrieq, our Aesthetic clinic is dedicated to providing high-quality, science-backed treatments tailored to your unique needs."
+      ]
+    },
+    {
+      "_key": "about1",
+      "heading": "Expertise You Can Trust",
+      "paragraphs": [
+        "Managed by experienced medical professionals, we combine advanced technology with personalized care to deliver safe and effective aesthetic solutions. Whether you're looking for skin rejuvenation, anti-aging treatments, or body contouring, we ensure results that are natural, refined, and aligned with your beauty goals."
+      ]
+    },
+    {
+      "_key": "about2",
+      "heading": "Our Motto: Enhancing Beauty, Elevating Confidence",
+      "paragraphs": [
+        "At RevivEstetik, our philosophy is simple, we enhance your natural beauty while helping you feel more confident in your skin. Every treatment is designed to bring out the best version of you."
+      ]
+    },
+    {
+      "_key": "about3",
+      "heading": "Why Choose Us?",
+      "paragraphs": [
+        "✔ Medical Expertise - Treatments performed by qualified professionals",
+        "✔ State-of-the-Art Technology - Latest innovations in aesthetic medicine",
+        "✔ Personalized Approach - Tailored treatments for natural-looking results",
+        "✔ Commitment to Safety - Highest standards of care and hygiene",
+        "Discover the perfect balance of beauty and wellness with RevivEstetik. Book your consultation today and let us help you achieve your aesthetic goals with confidence."
+      ]
+    }
+  ],
+  "locationMaps": [
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.7156136432977!2d14.469373375463771!3d35.831452572539135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e50a0a5e12f2d%3A0xd16001d4bc88b284!2sRevivestetik!5e0!3m2!1sen!2smt!4v1722334520464!5m2!1sen!2smt",
+    "https://www.google.com/maps/embed?pb=!3m2!1sen!2smt!4v1722334798041!5m2!1sen!2smt!6m8!1m7!1stmzGFXfW1rAsVllLrJSMaw!2m2!1d35.83151936922723!2d14.47193550381737!3f169.1433589924389!4f4.976431208608318!5f0.7820865974627469"
+  ]
+}

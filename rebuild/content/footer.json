@@ -1,0 +1,16 @@
+{
+  "footer": {
+    "name": "RevivEstetik",
+    "tagline": "Enhancing Beauty, Elevating Confidence",
+    "address": "RevivEstetik, 12 Carmelo Caruana Street, Żurrieq, Malta",
+    "email": "revivestetik@gmail.com",
+    "phone": "+356 2164 2351",
+    "hours": [
+      "Monday–Friday: 09:00–19:00",
+      "Saturday: 09:00–14:00",
+      "Sunday: Closed"
+    ],
+    "contactHeading": "Find us",
+    "hoursHeading": "Opening hours"
+  }
+}

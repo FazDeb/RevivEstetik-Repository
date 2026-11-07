@@ -1,0 +1,15 @@
+---
+import '../styles/site.css';
+import {getContent} from '../lib/content';
+const {settings:s}=await getContent();
+const {title=s.name,description=s.intro}=Astro.props;
+const path=Astro.url.pathname;
+const f=s.footer;
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title} | RevivEstetik</title><meta name="description" content={description}/><meta name="robots" content="noindex,nofollow"/></head><body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header><a class="brand" href="/"><img src={s.headerLogo || "/images/logo.jpg"} alt="RevivEstetik"/></a><nav aria-label="Main navigation">{[['/','Home'],['/about/','About'],['/treatments/','Services'],['/contact/','Contact us']].map(([url,label])=><a href={url} aria-current={(url==='/'?path==='/':path.startsWith(url))?'page':undefined}>{label}</a>)}</nav></header>
+<main id="main"><slot/></main>
+<footer id="footer"><div><a class="brand" href="/">{f.name}</a><p>{f.tagline}</p><div class="footer-socials" aria-label="Social media">{s.facebook && <a href={s.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>}{s.instagram && <a href={s.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>}{s.tiktok && <a href={s.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>}</div></div><div><h2>{f.contactHeading}</h2><p>{f.address}</p><a href={`mailto:${f.email}`}>{f.email}</a><br/><a href={`tel:${f.phone.replace(/\s/g,'')}`}>{f.phone}</a></div><div><h2>{f.hoursHeading}</h2>{f.hours.map(h=><p>{h}</p>)}</div><div class="footnote">© {new Date().getFullYear()} RevivEstetik <a href="/contact/">Contact us</a></div></footer>
+</body></html>

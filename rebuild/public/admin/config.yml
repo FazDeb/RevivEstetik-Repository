@@ -1,0 +1,422 @@
+{
+  "local_backend": {
+    "url": "http://127.0.0.1:8081/api/v1"
+  },
+  "backend": {
+    "name": "git-gateway"
+  },
+  "media_folder": "rebuild/public/images",
+  "public_folder": "/images",
+  "logo_url": "/images/logo.jpg",
+  "display_url": "http://127.0.0.1:4321",
+  "collections": [
+    {
+      "name": "home",
+      "label": "Homepage",
+      "description": "Edit the introduction and slogan shown on the homepage.",
+      "editor": {
+        "preview": true
+      },
+      "files": [
+        {
+          "name": "home",
+          "label": "Homepage",
+          "file": "rebuild/content/home.json",
+          "fields": [
+            {
+              "name": "name",
+              "label": "Clinic name",
+              "widget": "hidden"
+            },
+            {
+              "name": "headerLogo",
+              "label": "Logo in the navigation bar",
+              "widget": "image",
+              "hint": "Use a wide logo on a white or transparent background."
+            },
+            {
+              "name": "homeImage",
+              "label": "Homepage image",
+              "widget": "image",
+              "hint": "The large image above the clinic slogan."
+            },
+            {
+              "name": "tagline",
+              "label": "Clinic slogan",
+              "widget": "string",
+              "hint": "Shown beneath the homepage logo and on the About page. The footer has its own slogan."
+            },
+            {
+              "name": "intro",
+              "label": "Welcome text",
+              "widget": "text",
+              "hint": "A short introduction beneath the slogan on the homepage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "about",
+      "label": "About the clinic",
+      "description": "Edit the About page. Open a section by its heading, then change its text.",
+      "editor": {
+        "preview": true
+      },
+      "files": [
+        {
+          "name": "about",
+          "label": "About the clinic",
+          "file": "rebuild/content/about.json",
+          "fields": [
+            {
+              "name": "about",
+              "label": "Clinic summary",
+              "widget": "hidden"
+            },
+            {
+              "name": "aboutSections",
+              "label": "Page sections",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "heading",
+                  "label": "Heading",
+                  "widget": "string"
+                },
+                {
+                  "name": "images",
+                  "label": "Section images",
+                  "widget": "list",
+                  "required": false,
+                  "default": [],
+                  "label_singular": "image",
+                  "field": {
+                    "name": "image",
+                    "label": "Image",
+                    "widget": "image"
+                  },
+                  "hint": "Choose or upload images for this section. Drag to reorder, or remove an image you no longer want."
+                },
+                {
+                  "name": "paragraphs",
+                  "label": "Text",
+                  "widget": "list",
+                  "field": {
+                    "name": "paragraph",
+                    "label": "Paragraph",
+                    "widget": "text"
+                  },
+                  "label_singular": "paragraph",
+                  "hint": "Add a paragraph for each separate block of text."
+                }
+              ],
+              "label_singular": "section",
+              "collapsed": false,
+              "summary": "{{fields.heading}}",
+              "hint": "Open a heading to edit it. Drag sections to change their order."
+            },
+            {
+              "name": "locationMaps",
+              "label": "Google Maps embed URLs",
+              "widget": "hidden",
+              "field": {
+                "name": "url",
+                "label": "Url",
+                "widget": "string"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contact",
+      "label": "Contact & opening hours",
+      "description": "Edit the Contact page. Footer details are managed separately under Footer.",
+      "editor": {
+        "preview": false
+      },
+      "files": [
+        {
+          "name": "contact",
+          "label": "Contact & opening hours",
+          "file": "rebuild/content/contact.json",
+          "fields": [
+            {
+              "name": "phone",
+              "label": "Telephone",
+              "widget": "string",
+              "hint": "Include the country code, for example +356 2164 2351."
+            },
+            {
+              "name": "mobile",
+              "label": "Mobile",
+              "widget": "string",
+              "hint": "Include the country code, for example +356 2164 2351."
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "widget": "string",
+              "pattern": [
+                "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+                "Enter an email address, for example clinic@example.com."
+              ]
+            },
+            {
+              "name": "address",
+              "label": "Address",
+              "widget": "text"
+            },
+            {
+              "name": "hours",
+              "label": "Opening hours",
+              "widget": "list",
+              "field": {
+                "name": "hours",
+                "label": "Hours",
+                "widget": "string"
+              },
+              "label_singular": "opening-hours line",
+              "hint": "One line per day or group of days, for example Monday\u2013Friday: 09:00\u201319:00."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "treatments",
+      "label": "Treatments",
+      "label_singular": "Treatment",
+      "folder": "rebuild/content/treatments",
+      "create": true,
+      "format": "json",
+      "extension": "json",
+      "slug": "{{fields.slug}}",
+      "identifier_field": "title",
+      "summary": "{{title}}",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Treatment name",
+          "widget": "string"
+        },
+        {
+          "name": "slug",
+          "label": "Website address",
+          "widget": "string",
+          "pattern": [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Use lowercase letters, numbers and hyphens."
+          ],
+          "hint": "Keep this unchanged for existing treatments. For a new treatment, use a short name with hyphens, for example laser-hair-removal."
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "widget": "select",
+          "options": [
+            "Skin & rejuvenation",
+            "Laser & hair removal",
+            "Face & body",
+            "Specialist care"
+          ]
+        },
+        {
+          "name": "summary",
+          "label": "Short description",
+          "widget": "text",
+          "hint": "Appears on the Services page and at the top of this treatment page."
+        },
+        {
+          "name": "image",
+          "label": "Main photo",
+          "widget": "image",
+          "hint": "Choose an existing image or upload a new one. This image appears in the Services list and treatment page.",
+          "allow_multiple": false
+        },
+        {
+          "name": "order",
+          "label": "Position in the services list",
+          "widget": "number",
+          "value_type": "int",
+          "default": 100,
+          "hint": "Lower numbers appear first. Leave 100 to place a new treatment near the end.",
+          "min": 0
+        },
+        {
+          "name": "sections",
+          "label": "Treatment details",
+          "widget": "list",
+          "fields": [
+            {
+              "name": "heading",
+              "label": "Heading",
+              "widget": "string"
+            },
+            {
+              "name": "images",
+              "label": "Section images",
+              "widget": "list",
+              "required": false,
+              "default": [],
+              "label_singular": "image",
+              "field": {
+                "name": "image",
+                "label": "Image",
+                "widget": "image"
+              },
+              "hint": "Choose or upload images for this section. Drag to reorder, or remove an image you no longer want."
+            },
+            {
+              "name": "body",
+              "label": "Section text",
+              "widget": "markdown",
+              "modes": [
+                "rich_text"
+              ],
+              "buttons": [
+                "bold",
+                "italic",
+                "bulleted-list",
+                "numbered-list"
+              ],
+              "editor_components": [],
+              "hint": "Use the toolbar for bold text and bullet or numbered lists."
+            }
+          ],
+          "label_singular": "section",
+          "collapsed": false,
+          "summary": "{{fields.heading}}",
+          "hint": "Open a section to edit its heading and text. Drag sections to reorder them."
+        }
+      ],
+      "description": "Choose a treatment to update its details, or use New Treatment to add one.",
+      "editor": {
+        "preview": true
+      },
+      "sortable_fields": [
+        "title",
+        "category",
+        "order"
+      ],
+      "view_groups": [
+        {
+          "label": "Category",
+          "field": "category"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "Footer",
+      "description": "Edit the footer shown at the bottom of every page. Footer contact details are separate from the Contact page.",
+      "editor": {
+        "preview": false
+      },
+      "files": [
+        {
+          "name": "footer",
+          "label": "Footer text & contact details",
+          "file": "rebuild/content/footer.json",
+          "fields": [
+            {
+              "name": "footer",
+              "label": "Footer content",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "Clinic name",
+                  "widget": "string"
+                },
+                {
+                  "name": "tagline",
+                  "label": "Footer slogan",
+                  "widget": "string"
+                },
+                {
+                  "name": "contactHeading",
+                  "label": "Contact column heading",
+                  "widget": "string"
+                },
+                {
+                  "name": "address",
+                  "label": "Address",
+                  "widget": "text"
+                },
+                {
+                  "name": "email",
+                  "label": "Email",
+                  "widget": "string"
+                },
+                {
+                  "name": "phone",
+                  "label": "Telephone",
+                  "widget": "string"
+                },
+                {
+                  "name": "hoursHeading",
+                  "label": "Opening-hours heading",
+                  "widget": "string"
+                },
+                {
+                  "name": "hours",
+                  "label": "Opening hours",
+                  "widget": "list",
+                  "field": {
+                    "name": "line",
+                    "label": "Opening-hours line",
+                    "widget": "string"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "social",
+          "label": "Social media",
+          "file": "rebuild/content/social.json",
+          "fields": [
+            {
+              "name": "facebook",
+              "label": "Facebook",
+              "widget": "string",
+              "required": false,
+              "hint": "Paste the full profile link, starting with https://",
+              "pattern": [
+                "^https://[^\\s]+$",
+                "Use a full link starting with https://"
+              ]
+            },
+            {
+              "name": "instagram",
+              "label": "Instagram",
+              "widget": "string",
+              "required": false,
+              "hint": "Paste the full profile link, starting with https://",
+              "pattern": [
+                "^https://[^\\s]+$",
+                "Use a full link starting with https://"
+              ]
+            },
+            {
+              "name": "tiktok",
+              "label": "TikTok",
+              "widget": "string",
+              "required": false,
+              "hint": "Paste the full profile link, starting with https://",
+              "pattern": [
+                "^https://[^\\s]+$",
+                "Use a full link starting with https://"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "show_preview_links": false
+}

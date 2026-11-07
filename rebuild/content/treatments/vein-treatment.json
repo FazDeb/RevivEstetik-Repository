@@ -1,0 +1,82 @@
+{
+  "title": "Vein Treatments",
+  "summary": "Our vein removal services target spider and varicose veins, improving skin appearance and comfort. The procedure is minimally invasive and offers quick recovery.",
+  "slug": "vein-treatment",
+  "image": "/images/vein-treatment.png",
+  "category": "Specialist care",
+  "order": 2,
+  "sections": [
+    {
+      "heading": "Vein Treatments",
+      "paragraphs": [
+        "Vein treatments are designed to address concerns such as varicose veins, spider veins, and other venous conditions that may cause discomfort or impact confidence. The choice of treatment depends on the size, severity, and location of the affected veins."
+      ],
+      "images": [
+        "/images/vein-treatment-original-1-1.png"
+      ],
+      "body": "Vein treatments are designed to address concerns such as varicose veins, spider veins, and other venous conditions that may cause discomfort or impact confidence. The choice of treatment depends on the size, severity, and location of the affected veins."
+    },
+    {
+      "heading": "Sclerotherapy",
+      "paragraphs": [
+        "How It Works: A specialised solution (sclerosant) is injected directly into the affected veins. This causes irritation of the vein walls, leading them to collapse and gradually be reabsorbed by the body.",
+        "Best Suited For: Spider veins and small varicose veins.",
+        "Recovery Time: Minimal downtime. Patients can typically return to normal activities immediately. A series of sessions may be required for optimal results.",
+        "Side Effects: Mild bruising, temporary swelling, or redness at the injection site."
+      ],
+      "images": [
+        "/images/vein-treatment-original-2-1.png"
+      ],
+      "body": "-  **How It Works** : A specialised solution (sclerosant) is injected directly into the affected veins. This causes irritation of the vein walls, leading them to collapse and gradually be reabsorbed by the body.\n-  **Best Suited For** : Spider veins and small varicose veins.\n-  **Recovery Time** : Minimal downtime. Patients can typically return to normal activities immediately. A series of sessions may be required for optimal results.\n-  **Side Effects** : Mild bruising, temporary swelling, or redness at the injection site."
+    },
+    {
+      "heading": "Laser Vein Therapy",
+      "paragraphs": [
+        "How It WorksLaser therapy uses targeted light energy to heat and seal affected veins, which are then naturally reabsorbed over time.",
+        "Best Suited For: Small to medium spider veins.",
+        "Recovery Time: Minimal downtime, although mild discomfort, redness, or swelling may occur temporarily.",
+        "Side Effects: Temporary skin discoloration, mild bruising. Rarely, superficial burns pigmentation changes."
+      ],
+      "images": [
+        "/images/vein-treatment-original-3-1.png"
+      ],
+      "body": "-  **How It Works** Laser therapy uses targeted light energy to heat and seal affected veins, which are then naturally reabsorbed over time.\n-  **Best Suited For** : Small to medium spider veins.\n-  **Recovery Time** : Minimal downtime, although mild discomfort, redness, or swelling may occur temporarily.\n-  **Side Effects** : Temporary skin discoloration, mild bruising. Rarely, superficial burns pigmentation changes."
+    },
+    {
+      "heading": "Supporting Measures For Optimal Results",
+      "paragraphs": [],
+      "images": [],
+      "body": ""
+    },
+    {
+      "heading": "Compression Stockings",
+      "paragraphs": [
+        "Compression stockings apply graduated pressure to the legs, improving circulation and reducing blood pooling within the veins.",
+        "They are recommended for",
+        "Mild varicose veins",
+        "Prevention of progression",
+        "Post-treatment support to enhance recovery"
+      ],
+      "images": [
+        "/images/vein-treatment-original-5-1.png"
+      ],
+      "body": "Compression stockings apply graduated pressure to the legs, improving circulation and reducing blood pooling within the veins.\n\nThey are recommended for\n\n- Mild varicose veins\n- Prevention of progression\n- Post-treatment support to enhance recovery"
+    },
+    {
+      "heading": "Lifestyle Modifications",
+      "paragraphs": [
+        "Healthy lifestyle habits play a key role in both prevention and long-term management of vein conditions:",
+        "Regular Exercise: Activities such as walking or swimming improve circulation",
+        "Weight Management: Reduces pressure on the venous system",
+        "Leg Elevation: Encourages blood flow back to the heart",
+        "Movement: Avoid prolonged sitting or standing; aim to move every 30 minutes",
+        "Personalised Treatment Approach",
+        "Each patient is assessed individually to create a tailored treatment plan, combining medical treatments with supportive measures to achieve the best possible clinical and aesthetic outcomes."
+      ],
+      "images": [
+        "/images/vein-treatment-original-6-1.png"
+      ],
+      "body": "Healthy lifestyle habits play a key role in both prevention and long-term management of vein conditions:\n\n-  **Regular Exercise** : Activities such as walking or swimming improve circulation\n-  **Weight Management** : Reduces pressure on the venous system\n-  **Leg Elevation** : Encourages blood flow back to the heart\n-  **Movement** : Avoid prolonged sitting or standing; aim to move every 30 minutes\n-  **Personalised Treatment Approach** \n\nEach patient is assessed individually to create a tailored treatment plan, combining medical treatments with supportive measures to achieve the best possible clinical and aesthetic outcomes."
+    }
+  ]
+}

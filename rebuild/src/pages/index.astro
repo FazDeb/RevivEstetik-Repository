@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {getContent} from '../lib/content';
+const {settings:s}=await getContent();
+---
+<Layout><section class="home-intro wrap"><img src={s.homeImage || "/images/home-logo.jpg"} alt="RevivEstetik"/><h1>{s.tagline}</h1><p>{s.intro}</p><div class="actions"><a class="button" href="/treatments/">Our services</a><a class="button secondary" href="/contact/">Contact us</a></div></section></Layout>

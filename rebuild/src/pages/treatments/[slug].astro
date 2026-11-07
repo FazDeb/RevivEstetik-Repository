@@ -1,0 +1,10 @@
+---
+import {marked} from 'marked';
+import sanitizeHtml from 'sanitize-html';
+import Layout from '../../layouts/Layout.astro';
+import {getContent} from '../../lib/content';
+export async function getStaticPaths(){const {treatments}=await getContent();return treatments.map(t=>({params:{slug:t.slug},props:{t}}));}
+const {t}=Astro.props;
+const bodies=await Promise.all(t.sections.map(async s=>sanitizeHtml(await marked.parse(s.body || s.paragraphs.join("\n\n")))));
+---
+<Layout title={t.title} description={t.summary}><article class="wrap section"><a class="text-link" href="/treatments/">← All treatments</a><div class="original-treatment">{t.sections.map((section,index)=><section>{section.heading && (index===0?<h1>{section.heading}</h1>:<h2>{section.heading}</h2>)}<div class="treatment-row">{section.images?.length > 0 && <div class="section-images">{section.images.map(src=><img src={src} alt={section.heading || t.title} loading="lazy"/>)}</div>}<div class="treatment-copy" set:html={bodies[index]}/></div></section>)}</div><a class="button" href="/contact/">Contact us</a></article></Layout>
